@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.RoomController">
+    <children>
+        <Pane layoutY="-2.0" prefHeight="180.0" prefWidth="1200.0" style="-fx-background-color: #2D3447;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-2.0">
+            <children>
+                <Label layoutX="96.0" layoutY="55.0" text="Rooms" textFill="#2196f3">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/assets/imgs/icons8-left-32.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="back" layoutX="63.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #2D3447;" text="Back" textFill="WHITE" />
+            </children>
+        </Pane>
+        <Pane layoutY="178.0" prefHeight="623.0" prefWidth="197.0" style="-fx-background-color: #2D3447;">
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/assets/imgs/icons8-speedometer-48.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="dashboard" layoutX="62.0" layoutY="25.0" mnemonicParsing="false" onAction="#go" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="DashBoard" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="13.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/assets/imgs/icons8-stairs-up-48.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/assets/imgs/icons8-bunk-bed-48.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="13.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/assets/imgs/icons8-management-48.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/assets/imgs/icons8-event-48.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="floors" layoutX="62.0" layoutY="111.0" mnemonicParsing="false" onAction="#go" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="Floors" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="rooms" layoutX="66.0" layoutY="200.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="Rooms" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="teams" layoutX="62.0" layoutY="293.0" mnemonicParsing="false" onAction="#go" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="Teams" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="event" layoutX="62.0" layoutY="385.0" mnemonicParsing="false" onAction="#go" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="Event" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+
+                <Button layoutX="62.0" layoutY="460.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="134.0" style="-fx-background-color: #2D3447;" text="Change Password" textFill="WHITE" fx:id="change" onAction="#go">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+      <VBox layoutX="729.0" layoutY="178.0" prefHeight="623.0" prefWidth="461.0">
+         <children>
+            <TableView fx:id="roomtbl" prefHeight="622.0" prefWidth="461.0">
+              <columns>
+                <TableColumn fx:id="roomno" prefWidth="135.0" text="Room No" />
+                <TableColumn fx:id="roomcap" prefWidth="128.0" text="Room Capacity" />
+                  <TableColumn fx:id="roomfloor" prefWidth="197.0" text="Floor Name" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Pane layoutX="198.0" layoutY="179.0" prefHeight="622.0" prefWidth="532.0">
+         <children>
+            <Label layoutX="96.0" layoutY="119.0" text="Student 1" />
+            <TextField fx:id="st1" layoutX="209.0" layoutY="114.0" />
+            <Label layoutX="96.0" layoutY="216.0" text="Student 2" />
+            <Label layoutX="96.0" layoutY="301.0" text="Student 3" />
+            <Label layoutX="96.0" layoutY="386.0" text="Student 4" />
+            <TextField fx:id="st2" layoutX="209.0" layoutY="211.0" />
+            <TextField fx:id="st3" layoutX="209.0" layoutY="296.0" />
+            <TextField fx:id="st4" layoutX="209.0" layoutY="381.0" />
+            <Label layoutX="96.0" layoutY="470.0" text="Available Space" />
+            <TextField layoutX="266.0" layoutY="465.0" prefHeight="31.0" prefWidth="51.0" fx:id="avail"/>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

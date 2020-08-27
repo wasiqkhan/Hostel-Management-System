@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.DashboardController">
+    <children>
+        <Pane layoutY="-2.0" prefHeight="180.0" prefWidth="1200.0" style="-fx-background-color: #2D3447;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-2.0">
+            <children>
+                <Label layoutX="96.0" layoutY="55.0" text="Dashboard" textFill="#2196f3">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+            <ImageView fitHeight="31.0" fitWidth="51.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/assets/imgs/icons8-left-32.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="back" layoutX="63.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #2D3447;" text="Back" textFill="WHITE" />
+            </children>
+        </Pane>
+        <GridPane hgap="15.0" layoutX="347.0" layoutY="199.0" prefHeight="233.0" prefWidth="707.0" style="-" AnchorPane.leftAnchor="347.0" AnchorPane.rightAnchor="146.0" AnchorPane.topAnchor="199.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Pane prefHeight="212.0" prefWidth="192.0" style="-fx-background-color: #3A84C3; -fx-background-radius: 1em;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="118.0" layoutY="117.0" prefHeight="27.0" prefWidth="107.0" text="Total Students" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="totalstudent" alignment="CENTER" layoutX="140.0" layoutY="58.0" text="" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #D7534E; -fx-background-radius: 1em;" GridPane.columnIndex="1">
+                    <children>
+                        <Label fx:id="totalfloor" layoutX="175.0" layoutY="64.0" text="0" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="36.0" />
+                            </font>
+                        </Label>
+                  <Label alignment="CENTER" layoutX="132.0" layoutY="117.0" prefHeight="27.0" prefWidth="107.0" text="Total Floors" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </Pane>
+            </children>
+        </GridPane>
+      <GridPane hgap="15.0" layoutX="347.0" layoutY="461.0" prefHeight="233.0" prefWidth="707.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <children>
+            <Pane prefHeight="230.0" prefWidth="195.0" style="-fx-background-color: #EEAC4C; -fx-background-radius: 1em;">
+               <children>
+                  <Label fx:id="totalroom" alignment="CENTER" layoutX="139.0" layoutY="75.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="119.0" layoutY="117.0" prefHeight="27.0" prefWidth="107.0" text="Total Rooms" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="103.0" prefWidth="200.0" style="-fx-background-color: #5CB55B; -fx-background-radius: 1em;" GridPane.columnIndex="1">
+               <children>
+                  <Label fx:id="totalstaff" layoutX="170.0" layoutY="52.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="131.0" layoutY="117.0" prefHeight="27.0" prefWidth="107.0" text="Total Staff" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Pane layoutY="178.0" prefHeight="623.0" prefWidth="197.0" style="-fx-background-color: #2D3447;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/assets/imgs/icons8-speedometer-48.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="62.0" layoutY="25.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="DashBoard" textFill="WHITE" >
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="13.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/assets/imgs/icons8-stairs-up-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/assets/imgs/icons8-bunk-bed-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="13.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/assets/imgs/icons8-management-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/assets/imgs/icons8-event-48.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="62.0" layoutY="111.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="Floors" textFill="WHITE" fx:id="floors" onAction="#go">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="66.0" layoutY="200.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="Rooms" textFill="WHITE" fx:id="rooms" onAction="#go">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="62.0" layoutY="293.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="Teams" textFill="WHITE" fx:id="teams" onAction="#go">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="62.0" layoutY="385.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: #2D3447;" text="Event" textFill="WHITE" fx:id="event" onAction="#go">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+
+            <Button layoutX="62.0" layoutY="460.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="134.0" style="-fx-background-color: #2D3447;" text="Change Password" textFill="WHITE" fx:id="change" onAction="#go">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
