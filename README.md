@@ -11,3 +11,9 @@ Technologies used:
 3 Database: SQL Server
 
 This application is free to use and the code is available to anyone.
+
+# Screenshots
+
+<img src="screenshots/Picture1.png">
+
+![](screenshots/Picture1.png)
